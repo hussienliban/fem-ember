@@ -1,25 +1,22 @@
----
 language: node_js
 node_js:
-  - "4"
-
+- '4'
 sudo: false
-
 cache:
   directories:
-    - $HOME/.npm
-    - $HOME/.cache # includes bowers cache
-
+  - "$HOME/.npm"
+  - "$HOME/.cache"
 before_install:
-  - npm config set spin false
-  - npm install -g bower
-  - bower --version
-  - npm install phantomjs-prebuilt
-  - node_modules/phantomjs-prebuilt/bin/phantomjs --version
-
+- npm config set spin false
+- npm install -g bower
+- bower --version
+- npm install phantomjs-prebuilt
+- node_modules/phantomjs-prebuilt/bin/phantomjs --version
 install:
-  - npm install
-  - bower install
-
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
+deploy:
+  api_key:
+    secure: dW5AHUjjGByDoHiJ27R/bKFgnqSFldEw/Bd0+uQfv8vJb4n1u6w8eflQMrOgd6soCIG/VR8Uqz5leKAKORPfYlIcx+s+RCBFq6LMwLCwq/0JIJqKIXGMh0FqpIimGo9VRBP2S+R8rstBt99riMBd2ordK/TgBFOx9Wl7HgwWoNu5w1QhCZ4aXUKuCtfYPNeUm+CIC0B08z/9u2h4uB3/tDkerFoDH4tZBd9mH3TaiwyT2fbIfxsu87ZiMkg7zg7N1kzY4Yclqa3UuUihyNscRIRjY25j9kr9cHxsgzJbv1ZuS7AJRuyHCbrgJlQofDfW9Kfxa9K5VtFYm6lugPEQHDr20ihyleLI/1v6ElUmkm1ZSJQhVn3/eoRAnIjpBvuJ1Na1pGHpT2D1J8K/IGBqTLCupkIXyHs5aQqSqkENqhh+8AYPw+/Lmggl5FkuM+HDoErhKqGc9QYoshAn8bh6PcmV7MZwxj+Z4ircCeYawxxkc+z1RQ1WeoXyZJ7aXZi7Gg/nNesB9+VqLr3uaC3QfNZN2W07aNDspX+CPRoZmvU4rkMGg+nK7PTYur9LqXeMg0cesVos23RQhvOhkPd7cVz8Gyk0yx0SvTJEjmUukeLhuTyBBGc4J8UhmNmGchDxIbQkELqy4mqcpIp4fdXwyo+l3xKvhPVheia+pAAr2wo=

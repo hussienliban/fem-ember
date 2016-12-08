@@ -4,7 +4,6 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var Filter = require('broccoli-filter');
 var { log, debug } = require("broccoli-stew");
 
-module.exports = function(defaults) {
 function MyFilter(inputNode) {
 
   Filter.call(this, inputNode);
@@ -22,6 +21,8 @@ MyFilter.prototype.processString = function(existingString) {
 MyFilter.prototype.extensions = ['js'];
 
 MyFilter.prototype.targetExtension = 'js';
+
+module.exports = function(defaults) {
 
 
     var app = new EmberApp(defaults, {
