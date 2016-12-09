@@ -1,4 +1,3 @@
-/* global require, module */
 export function initialize( application ) {
   application.deferReadiness();
 

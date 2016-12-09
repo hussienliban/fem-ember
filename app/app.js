@@ -1,3 +1,4 @@
+/* global define:true */
 import Ember from 'ember';
 import Resolver from './resolver';
 import loadInitializers from 'ember-load-initializers';
@@ -18,7 +19,7 @@ define("math", [], function(){
     default: Math,
     PI: Math.PI
   };
-})
+});
 
 loadInitializers(App, config.modulePrefix);
 
