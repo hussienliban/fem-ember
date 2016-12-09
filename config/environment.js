@@ -16,9 +16,9 @@ module.exports = function(environment) {
                 Date: false
             }
         },
-        //fastboot: {
-            //hostWhitelist: [/\.herokuapp.com$/, /^localhost:\d+$/]
-        //},
+        fastboot: {
+            hostWhitelist: [/\.herokuapp.com$/, /^localhost:\d+$/]
+        },
         DS: {
             namespace: 'api',
             host: 'https://commently-api-stage.herokuapp.com'
