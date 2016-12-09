@@ -7,9 +7,3 @@ dependencies:
   override:
     - npm i
     - bower i
-deployment:
-  production:
-    branch: master
-    commands:
-      - EMBER_ENV=production npm run-script build
-      - rsync -qaz --delete -e ssh dist/ web@162.201.123.321:/var/www/myproject
