@@ -3,9 +3,6 @@
 
     <div class="pull-right">
 
-      {{#if loc}}
-        [  {{loc.lat}}, {{loc.lng}} ]
-      {{/if}}
       {{#unless (is-authenticated)}}
         {{link-to 'Login' 'auth.login' class='btn'}}
       {{else}}
@@ -14,3 +11,8 @@
     </div>
 </nav>
 {{outlet}}
+
+{{#if loc}}
+  [  {{loc.lat}}, {{loc.lng}} ]
+{{/if}}
+{{req.userAgent}}
