@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { Route, getOwner, get, set } = Ember;
+const { Route, getOwner, set } = Ember;
 export default Route.extend({
   init() {
     this._super(...arguments);
