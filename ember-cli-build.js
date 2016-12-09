@@ -2,12 +2,11 @@
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var Filter = require('broccoli-filter');
-var { log, debug } = require("broccoli-stew");
 
 function MyFilter(inputNode) {
 
   Filter.call(this, inputNode);
-  this.comment = `/* ${new Date} */\t`;
+  this.comment = `/* ${(new Date).toISOString()} */\t`;
 }
 
 MyFilter.prototype = Object.create(Filter.prototype);
