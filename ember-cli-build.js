@@ -1,25 +1,25 @@
 /*jshint node:true*/
 /* global require, module */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
-var Filter = require('broccoli-filter');
+//var Filter = require('broccoli-filter');
 
-function MyFilter(inputNode) {
+//function MyFilter(inputNode) {
 
-  Filter.call(this, inputNode);
-  this.comment = `/* ${(new Date).toISOString()} */\t`;
-}
+  //Filter.call(this, inputNode);
+  //this.comment = `/* ${(new Date).toISOString()} */\t`;
+//}
 
-MyFilter.prototype = Object.create(Filter.prototype);
+//MyFilter.prototype = Object.create(Filter.prototype);
 
-MyFilter.prototype.processString = function(existingString) {
+//MyFilter.prototype.processString = function(existingString) {
 
-  return this.comment + existingString;
+  //return this.comment + existingString;
 
-};
+//};
 
-MyFilter.prototype.extensions = ['js'];
+//MyFilter.prototype.extensions = ['js'];
 
-MyFilter.prototype.targetExtension = 'js';
+//MyFilter.prototype.targetExtension = 'js';
 
 module.exports = function(defaults) {
 
@@ -28,6 +28,6 @@ module.exports = function(defaults) {
         // Add options here
     });
 
-    return new MyFilter(app.toTree());
+    return app.toTree();
 
 };
